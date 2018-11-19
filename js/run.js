@@ -9,7 +9,7 @@ $(document).ready(function() {
 	$("#run").click(function(){
 		//获取输入内容
 		var codeVal = $('#code-area').val();
-
+		
 		//准备提交
 		postCode(codeVal);
 
@@ -22,6 +22,8 @@ $(document).ready(function() {
 			code:strCode
 		},function(e){
 			console.log(e);
+			//展示输出结果
+			$('#result-area').val(e);
 		})
 	}
 })
